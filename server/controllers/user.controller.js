@@ -2,10 +2,6 @@ const {User, Category, Comment,Post} = require("../models/user.model");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 
-// main queries
-// 
-
-
 module.exports.getAllUsers = (request, response) => {
     User.find()
         .then(allUsers => response.json({Users: allUsers}))
@@ -13,9 +9,9 @@ module.exports.getAllUsers = (request, response) => {
 };
 
 module.exports.getAllPosts = (request, response) => {
-    Post.find({category:{title:request.params.category}})
-        .then(allPosts => response.json({posts: allPosts}))
-        .catch(err => response.json({ message: "Something went wrong", error: err}))
+    User.find()
+    .then(allUsers => console.log(allUsers))
+    .catch(err => response.json({ message: "Something went wrong", error: err}))
 };
 
 module.exports.getAllCategories = (request, response) => {
@@ -40,8 +36,10 @@ module.exports.createCategory = (request, response) => {
 module.exports.createPost = (request, response) => {
 
     console.log(request.body.title);
+    console.log(request.body.image);
+
     User.findOneAndUpdate({_id: request.params.id},{
-        $push: { posts: {title:request.body.title, content:request.body.content, category:{title:request.body.categoryTitle} }}
+        $push: { posts: {title:request.body.title, content:request.body.content, image:request.body.image, category:{title:request.body.category} }}
     })
         .then(user => response.json({ msg: "success!", user: user }))
         .catch(err => res.json(err));

@@ -58,6 +58,7 @@ function PostForm() {
     console.log("Content: "+content);
     console.log("Image "+ image);
     axios.post('http://localhost:8000/api/user/603619a1ca85f7b3bddfa281/createp', {
+      image,
       title,
       content,
       category

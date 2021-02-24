@@ -26,6 +26,8 @@ Gaming Hub app cares about user experience and security and you can notice as a 
 - [Salah Abu Karsh](https://github.com/LSSalah)
 ### App Screenshots:
 ![capture1](https://raw.githubusercontent.com/NidalDannoon/GamingHub/main/scr1.png)
+![capture2](https://raw.githubusercontent.com/NidalDannoon/GamingHub/main/scr2.png)
+![capture3](https://raw.githubusercontent.com/NidalDannoon/GamingHub/main/scr3.png)
 ### App Live version:
 [Click Here](http://localhost:3000)
 

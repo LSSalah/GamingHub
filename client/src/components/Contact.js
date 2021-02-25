@@ -44,7 +44,7 @@ function Contact() {
 		<Container maxWidth="lg">
 		<Grid container spacing={1}>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper}style={{boxShadow:'none'}}>
 		    <AppForm>
           <Typography variant="h3" gutterBottom marked="center" align="center">
             Contact Us
@@ -54,7 +54,7 @@ function Contact() {
 		  </Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>
+          <Paper className={classes.paper} style={{boxShadow:'none'}}>
 		   <AppForm>
           <Typography variant="h3" gutterBottom marked="center" align="center">
             Find Us on Map

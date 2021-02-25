@@ -9,8 +9,8 @@ module.exports.getAllUsers = (request, response) => {
 };
 
 module.exports.getAllPosts = (request, response) => {
-    User.find()
-    .then(allUsers => console.log(allUsers))
+    User.find({}) 
+    .then(res => res.posts.map(post => console.log(post)))
     .catch(err => response.json({ message: "Something went wrong", error: err}))
 };
 

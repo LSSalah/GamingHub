@@ -37,7 +37,7 @@ const styles = (theme) => ({
 
 function AppAppBar(props) {
   const { classes } = props;
-  
+
   return (
     <div>
       <AppBar position="relative" color="transparent" style={{display:'flex', justifyContent:'spaceBetween' ,boxShadow: 'none', height:'100px'}}>
@@ -69,6 +69,22 @@ function AppAppBar(props) {
               href="/signup"
             >
               {'Sign Up'}
+            </Link>
+            <Link
+              variant="h6"
+              underline="none"
+              className={clsx(classes.rightLink, classes.linkSecondary)}
+              href="/about"
+            >
+              {'About Us'}
+            </Link>
+            <Link
+              variant="h6"
+              underline="none"
+              className={clsx(classes.rightLink, classes.linkSecondary)}
+              href="/contact"
+            >
+              {'Contact Us'}
             </Link>
           </div>
         </Toolbar>
